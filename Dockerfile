@@ -1,8 +1,3 @@
-FROM python:latest
-
-RUN pip install flask
-COPY hello.py /tmp/hello.py
-
-EXPOSE 5000
-CMD ["python","/tmp/hello.py"]
-
+FROM armhf/python:3.5
+ADD my_script.py /
+CMD [ "python", "./my_script.py" ]
